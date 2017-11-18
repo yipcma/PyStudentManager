@@ -14,8 +14,30 @@ def add_student(name, student_id = 123):
     student = {"name": name, "student_id": student_id}
     students.append(student)
 
+
+def save_file(student):
+    try:
+        f = open("students.txt", "a")
+        f.write(student + "\n")
+        f.close()
+    except Exception as err:
+        print(err)
+
+def read_file():
+    try:
+        f = open("students.txt", "r")
+        for student in f.readlines():
+            add_student(student)
+        f.close()
+    except Exception as err:
+        print(err)
+
+
+read_file()
+print_students_titlecase()
+
 student_name = input("Enter student name: ")
 student_id = input("Enter student id: ")
 
 add_student(student_name, student_id)
-print_students_titlecase()
+save_file(student_name)
