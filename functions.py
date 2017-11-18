@@ -1,14 +1,12 @@
 students = []
 
-def get_students_titlecase():
-    students_titlecase = []
-    for student in students:
-        student["name"] = student["name"].title()
-        students_titlecase.append(student)
-    return students_titlecase
-
-
 def print_students_titlecase():
+    def get_students_titlecase():
+        students_titlecase = []
+        for student in students:
+            student["name"] = student["name"].title()
+            students_titlecase.append(student)
+        return students_titlecase
     print(get_students_titlecase())
 
 
