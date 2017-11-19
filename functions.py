@@ -33,11 +33,14 @@ def read_file():
         print(err)
 
 
+# generator function
 def read_lines(f):
     for line in f:
         yield line
 
 
+# lambda function
+double = lambda x: x + 2
 
 read_file()
 print_students_titlecase()
@@ -47,3 +50,5 @@ student_id = input("Enter student id: ")
 
 add_student(student_name, student_id)
 save_file(student_name)
+
+print(double(2))
