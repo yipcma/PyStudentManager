@@ -26,11 +26,17 @@ def save_file(student):
 def read_file():
     try:
         f = open("students.txt", "r")
-        for student in f.readlines():
+        for student in read_lines(f):
             add_student(student)
         f.close()
     except Exception as err:
         print(err)
+
+
+def read_lines(f):
+    for line in f:
+        yield line
+
 
 
 read_file()
