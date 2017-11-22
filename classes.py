@@ -19,9 +19,11 @@ class Student:
     def get_school_name(self):
         return self.school_name
 
-mark = Student("mark")
-print(mark)
-print(students)
+class HighSchoolStudent(Student):
+    
+    school_name = "Springfield High School"
+    
+    
+james = HighSchoolStudent("james")
 
-# print class attribute
-print(Student.school_name)
+print(james)
