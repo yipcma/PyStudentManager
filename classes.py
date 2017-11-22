@@ -23,7 +23,10 @@ class HighSchoolStudent(Student):
     
     school_name = "Springfield High School"
     
+    def get_name_capitalize(self):
+        return super().get_name_capitalize() + "-HS"
+    
     
 james = HighSchoolStudent("james")
 
-print(james)
+print(james.get_name_capitalize())
