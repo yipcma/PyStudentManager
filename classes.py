@@ -25,8 +25,3 @@ class HighSchoolStudent(Student):
     
     def get_name_capitalize(self):
         return super().get_name_capitalize() + "-HS"
-    
-    
-james = HighSchoolStudent("james")
-
-print(james.get_name_capitalize())
